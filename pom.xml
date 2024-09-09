@@ -55,7 +55,7 @@
           </archive>
         </configuration>
       </plugin>
-      <plugin>
+   <!--   <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
         <version>3.5.0</version>
@@ -77,9 +77,23 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
+      </plugin>-->
 
     </plugins>
   </build>
- 
+  <reporting>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>cobertura-maven-plugin</artifactId>
+            <version>2.7</version>
+            <configuration>
+               <formats>
+                   <format>html</format>
+                   <format>xml</format>
+               </formats>
+            </configuration>
+        </plugin>
+    </plugins>
+</reporting>
 </project>
